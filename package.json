@@ -1,0 +1,29 @@
+{
+  "name": "my-smart-contract",
+  "version": "1.0.0",
+  "description": "A simple Ethereum smart contract using Hardhat",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "coverage": "hardhat coverage",
+    "node": "hardhat node",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "clean": "hardhat clean",
+    "lint": "solhint 'contracts/**/*.sol'"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.19.0",
+    "solhint": "^4.0.0"
+  },
+  "keywords": [
+    "ethereum",
+    "solidity",
+    "hardhat",
+    "smart-contract",
+    "blockchain"
+  ],
+  "author": "PRITHAM GANESH",
+  "license": "MIT"
+}
