@@ -7,11 +7,16 @@ contract SimpleStorage {
 
     event ValueChanged(uint256 newValue, address changedBy);
 
+    modifier onlyOwner() {
+        require(msg.sender == owner, "Only owner can call this function");
+        _;
+    }
+
     constructor() {
         owner = msg.sender;
     }
 
-    function setValue(uint256 _value) public {
+    function setValue(uint256 _value) public onlyOwner {
         storedValue = _value;
         emit ValueChanged(_value, msg.sender);
     }
